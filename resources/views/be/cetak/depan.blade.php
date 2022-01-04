@@ -48,7 +48,7 @@
                                 <select name="program_id" id="" class="form-control text-capitalize" required>
                                     <option value="">= Pilih Jenis Program =</option>
                                     @foreach ($program as $item)
-                                        <option class="text-capitalize" value="{{ $item->id }}">{{ $item->jenis }} - {{$item->program}}</option>
+                                        <option class="text-capitalize" value="{{ $item->id }}">{{ $item->jenis }}</option>
                                     @endforeach
                                 </select>
                             </div>
