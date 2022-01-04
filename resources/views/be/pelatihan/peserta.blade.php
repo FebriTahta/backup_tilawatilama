@@ -165,10 +165,12 @@
                             <label for=""><u>SL</u></label>
                             <input type="text" class="form-control" name="sl" id="sl" required>
                         </div>
+                        @if ($data->program->id !== 1)
                         <div class="form-group col-4">
                             <label for=""><u>MT</u></label>
                             <input type="text" class="form-control" name="mt" id="mt" required>
                         </div>
+                        @endif
                     </div>
                 </div>
                 <div class="modal-footer">

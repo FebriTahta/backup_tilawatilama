@@ -173,24 +173,30 @@
 						<td style="border-top: 0;border-bottom: 0;"></td>
 					</tr>
                     
-				<tr>
-					<th>2</th>
-					<td class="nilai6" style="text-transform: uppercase">&nbsp; &nbsp;<b> MICRO TEACHING </b></th>
-					<th colspan="3" class="nilai5"></th>
-					<th >{{ $p->mt }}</th>
-				</tr>
-				
-			
-				<tr>
-					<th></th>
-					<td class="nilai6">&nbsp; &nbsp;<b> RATA - RATA NILAI</b></th>
-					<th colspan="3" class="nilai5"></th>
-					<th >
-					
-						{{ $rata2 = ($jumlah+ $p->mt)/2 }}
-					
-					</th>
-				</tr>
+					@if ($pelatihan->program->id !== 1)
+					<tr>
+						<th>2</th>
+						<td class="nilai6" style="text-transform: uppercase">&nbsp; &nbsp;<b> MICRO TEACHING </b></th>
+						<th colspan="3" class="nilai5"></th>
+						<th >{{ $p->mt }}</th>
+					</tr>
+					@endif
+					@if ($pelatihan->program->id !== 1)
+					<tr>
+						<th></th>
+						<td class="nilai6">&nbsp; &nbsp;<b> RATA - RATA NILAI</b></th>
+						<th colspan="3" class="nilai5"></th>
+						<th >
+							@if ($pelatihan->program->id !== 1)
+							{{ $rata2 = ($jumlah+ $p->mt)/2 }}
+							@else
+							{{ $rata2 = $jumlah}}
+							@endif
+						</th>
+					</tr>
+					@else
+					<?php $rata2 = $jumlah?>
+					@endif
 			
                 <tr>
                     <th></th>
