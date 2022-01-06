@@ -9,6 +9,7 @@ use App\Http\Controllers\LembagaController;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\PelatihanController;
 use App\Http\Controllers\CetakController;
+use App\Http\Controllers\ExportController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -83,7 +84,8 @@ Route::get('/pilih-program-diklat/{program_id}',[CetakController::class,'pilih_p
 Route::post('/admin-cetak-syahadah-belakang',[CetakController::class,'cetak_belakang'])->name('cetak_belakang');
 Route::post('/admin-cetak-syahadah-depan',[CetakController::class,'cetak_depan'])->name('cetak_depan');
 
-
+// EXPORT
+Route::get('/admin-export-data-peserta/{pelatihan_id}',[ExportController::class,'export_peserta'])->name('export_peserta');
 // BACKUP DB TILAWATI
 // MASTER
 

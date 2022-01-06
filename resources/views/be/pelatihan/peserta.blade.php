@@ -44,6 +44,11 @@
                     
                     <input type="hidden" id="pelatihan_id" value="{{$data->id}}">
                     <div class="body">
+                        <center>
+                            <button class="btn btn-primary" data-id="{{$data->id}}" data-toggle="modal" data-target="#modal-export">
+                                EXPORT
+                            </button>
+                        </center>
                         <div id="errList" class="text-uppercase"></div>
                         <div class="table-responsive">
                             <table id="example" class="table table-bordered table-striped table-hover js-basic-example dataTable">
@@ -202,6 +207,33 @@
             </div>
             <div class="modal-footer" >
                 <input type="submit" id="btnhapus" class="text-white btn bg-pink waves-effect btn-round" value="HAPUS">
+                <button type="button" class="btn btn-danger btn-simple btn-round waves-effect" data-dismiss="modal">CLOSE</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-export" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="card">
+                <div class="modal-header">
+                    <h4 class="title" style="text-decoration-color: red; text-transform: uppercase">EXPORT DATA PESERTA</h4>
+                </div>
+            </div>
+            <form action="/admin-export-data-peserta/{{$data->id}}" method="GET" target="_blank">@csrf
+            <div class="card">
+                
+                    <div class="modal-body"> 
+                        <input type="hidden" name="id" id="id_del">
+                        <p>Anda akan meng-export data peserta <br> <strong> {{$data->nama_pelatihan}}</strong></p> 
+                        <p id="kategori_name"></p>
+                    </div>
+                
+            </div>
+            <div class="modal-footer" >
+                <input type="submit" id="btnhapus" class="text-white btn bg-blue waves-effect btn-round" value="EXPORT">
                 <button type="button" class="btn btn-danger btn-simple btn-round waves-effect" data-dismiss="modal">CLOSE</button>
             </div>
             </form>

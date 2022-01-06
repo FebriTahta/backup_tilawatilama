@@ -27,4 +27,9 @@ class Peserta extends Model
     {
         return $this->belongsTo(Pelatihan::class);
     }
+
+    public function lembaga()
+    {
+        return $this->belongsTo(Lembaga::class);
+    }
 }

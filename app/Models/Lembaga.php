@@ -14,4 +14,9 @@ class Lembaga extends Model
     {
         return $this->belongsTo(Kategori::class);
     }
+
+    public function peserta()
+    {
+        return $this->hasMany(Peserta::class);
+    }
 }
