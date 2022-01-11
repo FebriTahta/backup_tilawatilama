@@ -116,7 +116,7 @@
 	</div>
 		<table 
 		
-		style="width: 630px; margin-left:154px"
+		style="width: 550px; margin-left:200px"
 		class="table1">
 			<tr>
 					<th rowspan="2">No.</th>
@@ -136,7 +136,7 @@
 				<th colspan="3" class="pe3"></th>
 				<th >{{ $jumlah = $p->fs + $p->tj + $p->gm + $p->sl }}</th>
 			</tr>
-			
+					@if ($pelatihan->program->id !== 1 )
 					<tr>
 						<td class="pop"></td>
 						<td class="pop2" >&nbsp; &nbsp;&nbsp;<span style="text-transform: capitalize"> Fashohah</span></td>
@@ -172,6 +172,44 @@
 						<td class="nilai3" style="text-align: center">&nbsp; &nbsp;{{ $p->sl}} </td>
 						<td style="border-top: 0;border-bottom: 0;"></td>
 					</tr>
+					@else
+					<tr>
+						<td class="pop"></td>
+						<td class="pop2" >&nbsp; &nbsp;&nbsp;<span style="text-transform: capitalize"> Fashohah</span></td>
+						<td class="nilai" style="text-align: center">&nbsp; &nbsp; 28 </td>
+						<td class="nilai2" style="text-align: center">&nbsp; &nbsp; 23 </td>
+						<td class="nilai3" style="text-align: center">&nbsp; &nbsp;{{ $p->fs}} </td>
+						<td style="border-top: 0;border-bottom: 0;"></td>
+					</tr>
+
+                    <tr>
+						<td class="pop"></td>
+						<td class="pop2" >&nbsp; &nbsp;&nbsp;<span style="text-transform: capitalize"> Tajwid</span></td>
+						<td class="nilai" style="text-align: center">&nbsp; &nbsp; 45 </td>
+						<td class="nilai2" style="text-align: center">&nbsp; &nbsp; 35 </td>
+						<td class="nilai3" style="text-align: center">&nbsp; &nbsp;{{ $p->tj}} </td>
+						<td style="border-top: 0;border-bottom: 0;"></td>
+					</tr>
+
+                    <tr>
+						<td class="pop"></td>
+						<td class="pop2" >&nbsp; &nbsp;&nbsp;<span style="text-transform: capitalize"> Ghorib Musyikilat</span></td>
+						<td class="nilai" style="text-align: center">&nbsp; &nbsp; 10 </td>
+						<td class="nilai2" style="text-align: center">&nbsp; &nbsp; 7 </td>
+						<td class="nilai3" style="text-align: center">&nbsp; &nbsp;{{ $p->gm}} </td>
+						<td style="border-top: 0;border-bottom: 0;"></td>
+					</tr>
+				
+                    <tr>
+						<td class="pop"></td>
+						<td class="pop2" >&nbsp; &nbsp;&nbsp;<span style="text-transform: capitalize"> Suara dan Lagu</span></td>
+						<td class="nilai" style="text-align: center">&nbsp; &nbsp; 7 </td>
+						<td class="nilai2" style="text-align: center">&nbsp; &nbsp; 5 </td>
+						<td class="nilai3" style="text-align: center">&nbsp; &nbsp;{{ $p->sl}} </td>
+						<td style="border-top: 0;border-bottom: 0;"></td>
+					</tr>
+					@endif
+					
                     
 					@if ($pelatihan->program->id !== 1)
 					<tr>
@@ -212,8 +250,8 @@
                 </tr>
 		</table>
 			<div id="textbox" style="margin-top: 20px">
-				<div class="alignleft" style="margin-left: 180px">Baik : 85 - 95</div>
-				<div class="alignright" style="margin-right: 210px">Cukup : 75 - 84</div>
+				<div class="alignleft" style="margin-left: 200px">Baik : 80 - 95</div>
+				<div class="alignright" style="margin-right: 215px">Cukup : 70 - 79</div>
 			</div>
 	</div>
 	@endforeach
