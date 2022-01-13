@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Peserta;
+use App\Models\Pelatihan;
 use DataTables;
 use DB;
 use Illuminate\Http\Request;
@@ -17,7 +18,7 @@ class PesertaController extends Controller
     {
         if ($request->ajax()) {
             
-            $data = Peserta::orderBy('id','desc');
+            $data = Peserta::orderBy('id','desc')->with('pelatihan');
             
             return Datatables::of($data)
                 ->addIndexColumn()
@@ -25,10 +26,13 @@ class PesertaController extends Controller
                     $actionBtn = ' <a data-target="#modalhapus" data-id="'.$data->id.'" data-name="'.$data->name.'" data-toggle="modal" href="javascript:void(0)" class="delete btn bg-pink waves-effect btn-sm">Hapus</a>';
                     return $actionBtn;
                 })
-                ->rawColumns(['option'])
+                ->addColumn('tanggal', function($data){
+                    $tanggal = $data->pelatihan->tanggal;
+                    return $actionBtn;
+                })
+                ->rawColumns(['option','tanggal'])
                 ->make(true);
         }
     }
-
     
 }

@@ -47,6 +47,8 @@
                                 <thead style="text-transform: uppercase; font-size: 11px">
                                     <tr>
                                         <th>id</th>
+                                        <th>Program ID</th>
+                                        <th>Tanggal</th>
                                         <th>Nama</th>
                                         <th>Alamat</th>
                                         <th>Kota</th>
@@ -62,6 +64,8 @@
                                 <tfoot style="text-transform: uppercase; font-size: 11px">
                                     <tr>
                                         <th>id</th>
+                                        <th>Program ID</th>
+                                        <th>Tanggal</th>
                                         <th>Nama</th>
                                         <th>Alamat</th>
                                         <th>Kota</th>
@@ -147,6 +151,8 @@
             //     return meta.row + meta.settings._iDisplayStart + 1;
             // }},
             { "data": 'id' },
+            { "data": 'pelatihan_id' },
+            { "data": 'tanggal' },
             //samakan data kolom sesuai dt di data.php
             { "data": 'nama' },
             { "data": 'alamat' },
