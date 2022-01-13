@@ -55,6 +55,7 @@
                                         <th>Telp</th>
                                         <th>Tempat Lahir</th>
                                         <th>Tanggal Lahir</th>
+                                        <th>Kriteria</th>
                                         {{-- <th>Option</th> --}}
                                     </tr>
                                 </thead>
@@ -72,6 +73,7 @@
                                         <th>Telp</th>
                                         <th>Tempat Lahir</th>
                                         <th>Tanggal Lahir</th>
+                                        <th>Kriteria</th>
                                         {{-- <th>Option</th> --}}
                                     </tr>
                                 </tfoot>
@@ -160,6 +162,7 @@
             { "data": 'telp' },
             { "data": 'tmplahir' },
             { "data": 'tgllahir' },
+            { "data": 'kriteria' },
             // { "data": 'option' },
             ]
       });
