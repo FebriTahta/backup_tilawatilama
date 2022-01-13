@@ -28,7 +28,7 @@ class PesertaController extends Controller
                 })
                 ->addColumn('tanggal', function($data){
                     $tanggal = $data->pelatihan->tanggal;
-                    return $actionBtn;
+                    return $tanggal;
                 })
                 ->rawColumns(['option','tanggal'])
                 ->make(true);
