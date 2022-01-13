@@ -47,7 +47,7 @@
                                 <thead style="text-transform: uppercase; font-size: 11px">
                                     <tr>
                                         <th>id</th>
-                                        <th>Program ID</th>
+                                        <th>Diklat</th>
                                         <th>Tanggal</th>
                                         <th>Nama</th>
                                         <th>Alamat</th>
@@ -64,7 +64,7 @@
                                 <tfoot style="text-transform: uppercase; font-size: 11px">
                                     <tr>
                                         <th>id</th>
-                                        <th>Program ID</th>
+                                        <th>Diklat</th>
                                         <th>Tanggal</th>
                                         <th>Nama</th>
                                         <th>Alamat</th>
