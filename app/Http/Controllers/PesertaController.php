@@ -18,7 +18,7 @@ class PesertaController extends Controller
     {
         if ($request->ajax()) {
             
-            $data = Peserta::orderBy('id','desc')->with('pelatihan');
+            $data = Peserta::orderBy('id','desc')->with(['pelatihan', 'pelatihan.tanggal']);
             
             return Datatables::of($data)
                 ->addIndexColumn()
