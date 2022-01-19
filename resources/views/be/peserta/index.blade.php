@@ -154,7 +154,7 @@
             // }},
             { "data": 'id' },
             { "data": 'pelatihan_id' },
-            { "data": 'tanggal' },
+            { "data": 'tanggal', "name : pelatihan.tanggal" },
             //samakan data kolom sesuai dt di data.php
             { "data": 'nama' },
             { "data": 'alamat' },
