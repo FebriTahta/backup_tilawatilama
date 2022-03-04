@@ -135,7 +135,7 @@
                     <th colspan="3" class="pe3"></th>
                     <th >{{ $jumlah = $p->fs + $p->tj + $p->gm + $p->sl }}</th>
                 </tr>
-                        @if ($pelatihan->program->id !== 1 )
+                        @if ($p->pelatihan->program->id !== 1 )
                         <tr>
                             <td class="pop"></td>
                             <td class="pop2" >&nbsp; &nbsp;&nbsp;<span style="text-transform: capitalize"> Fashohah</span></td>
@@ -210,7 +210,7 @@
                         @endif
                         
                         
-                        @if ($pelatihan->program->id !== 1)
+                        @if ($p->pelatihan->program->id !== 1)
                         <tr>
                             <th>2</th>
                             <td class="nilai6" style="text-transform: uppercase">&nbsp; &nbsp;<b> MICRO TEACHING </b></th>
@@ -218,7 +218,7 @@
                             <th >{{ $p->mt }}</th>
                         </tr>
                         @endif
-                        @if ($pelatihan->program->id !== 1)
+                        @if ($p->pelatihan->program->id !== 1)
                         <tr>
                             <th></th>
                             <td class="nilai6">&nbsp; &nbsp;<b> RATA - RATA NILAI</b></th>
