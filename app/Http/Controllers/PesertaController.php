@@ -30,7 +30,11 @@ class PesertaController extends Controller
                     $tanggal = $data->pelatihan->tanggal;
                     return $tanggal;
                 })
-                ->rawColumns(['option','tanggal'])
+                ->addColumn('cetak', function($data){
+                    $cetak = '<a href="#"><i class="fa fa-print"></i></a>';
+                    return $cetak;
+                })
+                ->rawColumns(['option','tanggal','cetak'])
                 ->make(true);
         }
     }
