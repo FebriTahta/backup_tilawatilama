@@ -82,8 +82,8 @@ class PelatihanController extends Controller
                     return $edit;
                 })
                 ->addColumn('print', function($data){
-                    $print = ' <a data-target="#modalhapus" data-id="'.$data->id.'" data-name="'.$data->name.'" data-toggle="modal" href="javascript:void(0)" class="delete btn waves-effect btn-sm">depan</a>';
-                    $print .= ' <a data-target="#modalhapus" data-id="'.$data->id.'" data-name="'.$data->name.'" data-toggle="modal" href="javascript:void(0)" class="delete btn waves-effect btn-sm">belakang</a>';
+                    $print = ' <a  href="/admin-cetak-depan-perseorangan/'.$data->id.'" class="delete btn waves-effect btn-sm">depan</a>';
+                    $print .= ' <a href="/admin-cetak-belakang-perseorangan/'.$data->id.'" class="delete btn waves-effect btn-sm">belakang</a>';
                     return $print;
                 })
                 ->rawColumns(['option','edit','print'])

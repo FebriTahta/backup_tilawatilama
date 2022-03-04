@@ -84,6 +84,10 @@ Route::get('/pilih-program-diklat/{program_id}',[CetakController::class,'pilih_p
 Route::post('/admin-cetak-syahadah-belakang',[CetakController::class,'cetak_belakang'])->name('cetak_belakang');
 Route::post('/admin-cetak-syahadah-depan',[CetakController::class,'cetak_depan'])->name('cetak_depan');
 
+// CETAK DEPAN & BELAKANG PERSEORANGAN
+Route::get('/admin-cetak-depan-perseorangan/{peserta_id}',[CetakController::class,'cetak_depan_seorang'])->name('cetak.depan_seorang');
+Route::get('/admin-cetak-belakang-perseorangan/{peserta_id}',[CetakCOntroller::class,'cetak_belakang_seorang'])->name('cetak.belakang_seorang');
+
 // EXPORT
 Route::get('/admin-export-data-peserta/{pelatihan_id}',[ExportController::class,'export_peserta'])->name('export_peserta');
 // BACKUP DB TILAWATI
