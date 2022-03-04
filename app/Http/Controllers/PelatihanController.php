@@ -85,7 +85,7 @@ class PelatihanController extends Controller
                     $cetak = ' <a data-target="#modalhapus" data-id="'.$data->id.'" data-name="'.$data->name.'" data-toggle="modal" href="javascript:void(0)" class="delete btn bg-pink waves-effect btn-sm"><i class="material-icons">print</i></a>';
                     return $cetak;
                 })
-                ->rawColumns(['option','edit'])
+                ->rawColumns(['option','edit','cetak'])
                 ->make(true);
         }
     }
