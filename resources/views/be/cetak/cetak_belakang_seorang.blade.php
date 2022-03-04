@@ -224,7 +224,7 @@
                             <td class="nilai6">&nbsp; &nbsp;<b> RATA - RATA NILAI</b></th>
                             <th colspan="3" class="nilai5"></th>
                             <th >
-                                @if ($pelatihan->program->id !== 1)
+                                @if ($p->pelatihan->program->id !== 1)
                                 {{ $rata2 = ($jumlah+ $p->mt)/2 }}
                                 @else
                                 {{ $rata2 = $jumlah}}
