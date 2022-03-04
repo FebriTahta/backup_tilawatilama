@@ -55,6 +55,7 @@
                                 <thead style="text-transform: capitalize; font-size: 11px">
                                     <tr>
                                         <th>Edit</th>
+                                        <th>Cetak</th>
                                         <th>id</th>
                                         <th>Nama</th>
                                         <th>Alamat</th>
@@ -71,6 +72,7 @@
                                 <tfoot style="text-transform: capitalize; font-size: 11px">
                                     <tr>
                                         <th>Edit</th>
+                                        <th>Cetak</th>
                                         <th>id</th>
                                         <th>Nama</th>
                                         <th>Alamat</th>
@@ -260,6 +262,7 @@
             //     return meta.row + meta.settings._iDisplayStart + 1;
             // }},
             { "data": 'edit' },
+            { "data": 'cetak' },
             { "data": 'id' },
             //samakan data kolom sesuai dt di data.php
             { "data": 'nama' },
