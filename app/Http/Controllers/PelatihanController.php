@@ -82,7 +82,7 @@ class PelatihanController extends Controller
                     return $edit;
                 })
                 ->addColumn('print', function($data){
-                    $print = ' <a data-target="#modalhapus" data-id="'.$data->id.'" data-name="'.$data->name.'" data-toggle="modal" href="javascript:void(0)" class="delete btn bg-pink waves-effect btn-sm"><i class="material-icons">print</i></a>';
+                    $print = ' <a data-target="#modalhapus" data-id="'.$data->id.'" data-name="'.$data->name.'" data-toggle="modal" href="javascript:void(0)" class="delete btn waves-effect btn-sm"><i class="material-icons">print</i></a>';
                     return $print;
                 })
                 ->rawColumns(['option','edit','print'])
