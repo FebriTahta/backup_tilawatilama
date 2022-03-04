@@ -20,7 +20,8 @@ class Peserta extends Model
                         'tj'        ,
                         'gm'        ,
                         'sl'        ,
-                        'mt'        
+                        'mt'        ,
+                        'kriteria'  ,
     ];
 
     public function pelatihan()
