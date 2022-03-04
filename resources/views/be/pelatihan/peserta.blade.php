@@ -128,7 +128,7 @@
                     </div>
                     <div class="form-group">
                         <label for=""><u>Nama Peserta</u></label>
-                        <input type="text" name="nama" style="text-transform: uppercase" id="nama" class="form-control" required>
+                        <input type="text" name="nama" id="nama" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for=""><u>Alamat</u></label>
