@@ -87,6 +87,9 @@ class CetakController extends Controller
 
     public function cetak_belakang_seorang(Request $request, $peserta_id)
     {
-
+        $p        = Peserta::find($peserta_id);
+        $customPaper    = array(0,0,792,612);
+    	$pdf = PDF::loadview('be.cetak.cetak_belakang_seorang',compact('p'))->setPaper($customPaper, 'portrait');
+    	return $pdf->download('ijazah-depan-peserta-_'.$item->name.'.pdf','I');
     }
 }
