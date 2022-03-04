@@ -352,6 +352,7 @@
     var gm    = button.data('gm');
     var sl    = button.data('sl');
     var mt    = button.data('mt');
+    var kriteria    = button.data('kriteria');
     var modal = $(this)
     modal.find('.modal-body #id').val(id);
     modal.find('.modal-body #nama').val(nama);
@@ -365,6 +366,7 @@
     modal.find('.modal-body #gm').val(gm);
     modal.find('.modal-body #sl').val(sl);
     modal.find('.modal-body #mt').val(mt);
+    modal.find('.modal-body #kriteria').val(kriteria);
     })
 
     $('#formhapuskategori').submit(function(e) {
