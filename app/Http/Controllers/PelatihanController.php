@@ -94,7 +94,6 @@ class PelatihanController extends Controller
     public function page_admin_peserta_pelatihan_edit(Request $request){
 
         if ($request->ajax()) {
-            
             $validator = Validator::make($request->all(), [
                 'id'        =>  'required',
                 'nama'      =>  'required|max:100',
@@ -119,24 +118,48 @@ class PelatihanController extends Controller
                 ]);
     
             }else {
-                $data   = Peserta::updateOrCreate(
-                    [
-                        'id' => $request->id
-                    ],
-                    [
-                        'nama'      =>  $request->nama,
-                        'alamat'    =>  strtoupper($request->alamat),
-                        'kota'      =>  strtoupper($request->kota),
-                        'telp'      =>  $request->telp,
-                        'tmplahir'  =>  strtoupper($request->tmplahir),
-                        'tgllahir'  =>  $request->tgllahir,
-                        'fs'        =>  $request->fs,
-                        'tj'        =>  $request->tj,
-                        'gm'        =>  $request->gm,
-                        'sl'        =>  $request->sl,
-                        'mt'        =>  $request->mt
-                    ]
-                );
+                if ($request->kriteria !== null) {
+                    # code...
+                    $data   = Peserta::updateOrCreate(
+                        [
+                            'id' => $request->id
+                        ],
+                        [
+                            'nama'      =>  $request->nama,
+                            'alamat'    =>  strtoupper($request->alamat),
+                            'kota'      =>  strtoupper($request->kota),
+                            'telp'      =>  $request->telp,
+                            'tmplahir'  =>  strtoupper($request->tmplahir),
+                            'tgllahir'  =>  $request->tgllahir,
+                            'fs'        =>  $request->fs,
+                            'tj'        =>  $request->tj,
+                            'gm'        =>  $request->gm,
+                            'sl'        =>  $request->sl,
+                            'mt'        =>  $request->mt,
+                            'kriteria'  => $request->kriteria,
+                        ]
+                    );
+                }else {
+                    # code...
+                    $data   = Peserta::updateOrCreate(
+                        [
+                            'id' => $request->id
+                        ],
+                        [
+                            'nama'      =>  $request->nama,
+                            'alamat'    =>  strtoupper($request->alamat),
+                            'kota'      =>  strtoupper($request->kota),
+                            'telp'      =>  $request->telp,
+                            'tmplahir'  =>  strtoupper($request->tmplahir),
+                            'tgllahir'  =>  $request->tgllahir,
+                            'fs'        =>  $request->fs,
+                            'tj'        =>  $request->tj,
+                            'gm'        =>  $request->gm,
+                            'sl'        =>  $request->sl,
+                            'mt'        =>  $request->mt,
+                        ]
+                    );
+                }
 
                 return response()->json(
                     [

@@ -179,6 +179,14 @@
                         </div>
                         @endif
                     </div>
+                    <h2>KRITERIA</h2>
+                    <div class="row">
+                        <div class="form-group col-12">
+                            <label for=""><u>KRITERIA</u></label>
+                            <input type="text" class="form-control" style="text-transform: uppercase" name="kriteria" id="kriteria" required>
+                        </div>
+                        
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <input type="submit" id="btnedit" class="text-white btn bg-blue waves-effect btn-round" value="SIMPAN">
