@@ -262,7 +262,7 @@
             //     return meta.row + meta.settings._iDisplayStart + 1;
             // }},
             { "data": 'edit' },
-            { "data": 'cetak' },
+            { "data": 'print' },
             { "data": 'id' },
             //samakan data kolom sesuai dt di data.php
             { "data": 'nama' },
