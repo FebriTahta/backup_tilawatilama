@@ -124,7 +124,7 @@ class PelatihanController extends Controller
                         'id' => $request->id
                     ],
                     [
-                        'nama'      =>  strtoupper($request->nama),
+                        'nama'      =>  $request->nama,
                         'alamat'    =>  strtoupper($request->alamat),
                         'kota'      =>  strtoupper($request->kota),
                         'telp'      =>  $request->telp,
