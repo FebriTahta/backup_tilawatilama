@@ -39,7 +39,7 @@ class PesertaController extends Controller
                     $cetak = '<a href="#"><i class="fa fa-print"></i></a>';
                     return $cetak;
                 })
-                ->rawColumns(['option','tanggal','cetak'])
+                ->rawColumns(['option','tanggal','cetak','name'])
                 ->make(true);
         }
     }
