@@ -5,7 +5,7 @@ use App\Models\Peserta;
 use App\Models\Pelatihan;
 use DataTables;
 use DB;
-use Illuminate\Http\Request;
+use Illuminate\Http\Request; 
 
 class PesertaController extends Controller
 {
@@ -30,6 +30,11 @@ class PesertaController extends Controller
                     $tanggal = $data->pelatihan->tanggal;
                     return $tanggal;
                 })
+                ->addColumn('name', function($data){
+                    
+                    $name = '<a href="/admin-peserta-edit/'.$data->id.'">'.$data->nama.'</a>';
+                    return $name;
+                })
                 ->addColumn('cetak', function($data){
                     $cetak = '<a href="#"><i class="fa fa-print"></i></a>';
                     return $cetak;
@@ -37,6 +42,31 @@ class PesertaController extends Controller
                 ->rawColumns(['option','tanggal','cetak'])
                 ->make(true);
         }
+    }
+
+    public function page_admin_peserta_edit($peserta_id)
+    {
+        $data = Peserta::find($peserta_id);
+        return view('be.peserta.edit',compact($data));
+    }
+
+    public function post_admin_peserta(Request $request)
+    {
+        Peserta::updateOrCreate(
+            [
+                'id' => $request->id,
+            ],
+            [
+                'nama' => $request->nama,
+                'alamat' => $request->alamat,
+                'kota' => $request->kota,
+                'telp' => $request->telp,
+                'tmptlahir' => $request->tmptlahir,
+                'tgllahir' => $request->tgllahir,
+            ]
+        );
+
+        return redirect()->back();
     }
     
 }

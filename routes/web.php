@@ -68,6 +68,8 @@ Route::get('/admin-kriteria-list',[KriteriaController::class, 'page_admin_kriter
 // PESERTA
 Route::get('/admin-peserta-page',[PesertaController::class, 'page_admin_peserta_page'])->name('page.laporan.peserta_page');
 Route::get('/admin-peserta-list',[PesertaController::class, 'page_admin_peserta_list'])->name('page.laporan.peserta_list');
+Route::get('/admin-peserta-edit/{peserta_id}',[PesertaController::class, 'page_admin_peserta_edit'])->name('page.laporan.peserta_edit');
+Route::post('/admin-peserta-post',[PesertaController::class,'post_admin_peserta'])->name('post_admin_peserta');
 
 // PELATIHAN
 Route::get('/admin-pelatihan-page',[PelatihanController::class,'page_admin_pelatihan_page'])->name('page.laporan.pelatihan_page');
