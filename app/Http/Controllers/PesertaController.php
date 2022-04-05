@@ -61,7 +61,7 @@ class PesertaController extends Controller
                 'alamat' => $request->alamat,
                 'kota' => $request->kota,
                 'telp' => $request->telp,
-                'tmptlahir' => $request->tmptlahir,
+                'tmptlahir' => $request->tmplahir,
                 'tgllahir' => $request->tgllahir,
             ]
         );
