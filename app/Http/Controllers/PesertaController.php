@@ -47,7 +47,7 @@ class PesertaController extends Controller
     public function page_admin_peserta_edit($peserta_id)
     {
         $data = Peserta::find($peserta_id);
-        return view('be.peserta.edit',compact($data));
+        return view('be.peserta.edit',compact('data'));
     }
 
     public function post_admin_peserta(Request $request)
