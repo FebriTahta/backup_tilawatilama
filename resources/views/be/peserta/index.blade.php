@@ -81,7 +81,7 @@
                         </div>
                     </div>
                     <br><br>
-                    <div class="body">
+                    {{-- <div class="body">
                         <div id="errList2" class="text-uppercase"></div>
                         <a href="/admin-export-peserta-custom-search-demo-export" class="btn btn-primary"> download excel</a>
                         <br>
@@ -95,7 +95,7 @@
                                         <th>Kota / Kabu</th>
                                         <th>Alamat</th>
                                         <th>Telp</th>
-                                        {{-- <th>Option</th> --}}
+                                        
                                     </tr>
                                 </thead>
                                 <tbody style="text-transform: capitalize; font-size: 10px">
@@ -118,12 +118,12 @@
                                         <th>Kota / Kabu</th>
                                         <th>Alamat</th>
                                         <th>Telp</th>
-                                        {{-- <th>Option</th> --}}
+                                        
                                     </tr>
                                 </tfoot>
                             </table>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
