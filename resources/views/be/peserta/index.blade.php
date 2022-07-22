@@ -200,7 +200,7 @@
             { "data": 'pelatihan_id' },
             { "data": 'tanggal', "name" : 'pelatihan.tanggal' },
             //samakan data kolom sesuai dt di data.php
-            { "data": 'peserta.name' },
+            { "data": 'name' },
             { "data": 'alamat' },
             { "data": 'kota' },
             { "data": 'telp' },

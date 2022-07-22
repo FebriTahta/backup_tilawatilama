@@ -33,16 +33,17 @@ class PesertaController extends Controller
                     $tanggal = $data->pelatihan->tanggal;
                     return $tanggal;
                 })
-                ->addColumn('name', function($data){
+                // ->addColumn('name', function($data){
                     
-                    $name = '<a href="/admin-peserta-edit/'.$data->id.'">'.$data->nama.'</a>';
-                    return $name;
-                })
+                //     $name = '<a href="/admin-peserta-edit/'.$data->id.'">'.$data->nama.'</a>';
+                //     return $name;
+                // })
                 ->addColumn('cetak', function($data){
                     $cetak = '<a href="#"><i class="fa fa-print"></i></a>';
+                    $cetak .= ' <a href="/admin-peserta-edit/'.$data->id.'">Edit</a>';
                     return $cetak;
                 })
-                ->rawColumns(['option','tanggal','cetak','name'])
+                ->rawColumns(['option','tanggal','cetak'])
                 ->make(true);
         }
     }
