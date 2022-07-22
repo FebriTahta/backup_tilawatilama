@@ -11,7 +11,10 @@ class PesertaController extends Controller
 {
     public function page_admin_peserta_page()
     {
-        return view('be.peserta.index');
+        $peserta = Peserta::where('bersyahadah', '1')->whereHas('pelatihan', function($q){
+            $q->where('nama_pelatihan', 'PELATIHAN TOT INSTRUKTUR')->orwhere('program_id', '3');
+        })->get();
+        return view('be.peserta.index',compact('peserta'));
     }
 
     public function page_admin_peserta_list(Request $request)

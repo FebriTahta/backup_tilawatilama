@@ -80,6 +80,50 @@
                             </table>
                         </div>
                     </div>
+                    <br><br>
+                    <div class="body">
+                        <div id="errList2" class="text-uppercase"></div>
+                        <a href="/admin-export-peserta-custom-search-demo-export" class="btn btn-primary"> download excel</a>
+                        <br>
+                        <div class="table-responsive">
+                            <table id="example2" class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                <thead style="text-transform: uppercase; font-size: 11px">
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Pelatihan</th>
+                                        <th>Nama</th>
+                                        <th>Kota / Kabu</th>
+                                        <th>Alamat</th>
+                                        <th>Telp</th>
+                                        {{-- <th>Option</th> --}}
+                                    </tr>
+                                </thead>
+                                <tbody style="text-transform: capitalize; font-size: 10px">
+                                    @foreach ($peserta as $key=> $item)
+                                    <tr>
+                                        <td>{{$key+1}}</td>
+                                        <td>{{$item->pelatihan->nama_pelatihan}}</td>
+                                        <td>{{$item->nama}}</td>
+                                        <td>{{$item->kota}}</td>
+                                        <td>{{$item->alamat}}</td>
+                                        <td>{{$item->telp}}</td>
+                                    </tr>        
+                                    @endforeach
+                                </tbody>
+                                <tfoot style="text-transform: uppercase; font-size: 11px">
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Pelatihan</th>
+                                        <th>Nama</th>
+                                        <th>Kota / Kabu</th>
+                                        <th>Alamat</th>
+                                        <th>Telp</th>
+                                        {{-- <th>Option</th> --}}
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -156,7 +200,7 @@
             { "data": 'pelatihan_id' },
             { "data": 'tanggal', "name" : 'pelatihan.tanggal' },
             //samakan data kolom sesuai dt di data.php
-            { "data": 'name' },
+            { "data": 'peserta.name' },
             { "data": 'alamat' },
             { "data": 'kota' },
             { "data": 'telp' },

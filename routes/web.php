@@ -92,6 +92,7 @@ Route::get('/admin-cetak-belakang-perseorangan/{peserta_id}',[CetakCOntroller::c
 
 // EXPORT
 Route::get('/admin-export-data-peserta/{pelatihan_id}',[ExportController::class,'export_peserta'])->name('export_peserta');
+Route::get('/admin-export-peserta-custom-search-demo-export',[ExportController::class,'export_custom_peserta'])->name('export_custom_peserta');
 // BACKUP DB TILAWATI
 // MASTER
 
