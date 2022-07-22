@@ -56,7 +56,7 @@
                                         <th>Tempat Lahir</th>
                                         <th>Tanggal Lahir</th>
                                         <th>Kriteria</th>
-                                        {{-- <th>Option</th> --}}
+                                        <th>Option</th>
                                     </tr>
                                 </thead>
                                 <tbody style="text-transform: capitalize; font-size: 10px">
@@ -74,7 +74,7 @@
                                         <th>Tempat Lahir</th>
                                         <th>Tanggal Lahir</th>
                                         <th>Kriteria</th>
-                                        {{-- <th>Option</th> --}}
+                                        <th>Option</th>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -207,7 +207,7 @@
             { "data": 'tmplahir' },
             { "data": 'tgllahir' },
             { "data": 'kriteria' },
-            // { "data": 'option' },
+            { "data": 'cetak' },
             ]
       });
     });
