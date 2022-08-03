@@ -21,7 +21,7 @@ class PesertaController extends Controller
     {
         if ($request->ajax()) {
             
-            $data = Peserta::with(['pelatihan']);
+            $data = Peserta::with('pelatihan');
             
             return Datatables::of($data)
                 ->addIndexColumn()
