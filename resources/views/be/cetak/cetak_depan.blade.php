@@ -90,9 +90,9 @@
 				<tr style="height: 78px;">
 					{{-- QR --}}
 					<td class="bawah" style="width: 210px; height: 70px; ">
-						{{-- <div class="tepi" style="width: 70px; padding: 2px; ">
+						<div class="tepi" style="width: 70px; padding: 2px; ">
 							<img src="images/{{ $item->slug }}.png" alt="" width="70px" height="70px">
-						</div> --}}
+						</div>
 					</td>
 					{{-- kosong --}}
 					<td class="bawah" style="width: 156px; height: 70px; ">&nbsp;</td>
