@@ -72,7 +72,8 @@
                     <td class="atas" style="width: 52px; height: 37px;">&nbsp;</td>
 				</tr>
 				</tbody>
-			</table>			
+			</table>
+
 			<table 
 		
 			style="margin-left:169px; margin-top: 15px"
@@ -103,7 +104,7 @@
 				</tr>
 				<tr style="height: 5px;">
 					{{-- no syahadah --}}
-					<td class="atas" style="width: 210px; height: 5px;">No. Syahadah : &nbsp;{{ $item->pelatihan_id }}/{{ $tahun }}/{{ $item->id }}</td>
+					<td class="atas" style="width: 210px; height: 5px; font-size: 13px">No. Syahadah : &nbsp;{{ $item->pelatihan_id }}/{{ $tahun }}/{{ $item->id }}</td>
 					{{-- kosong --}}
 					<td class="bawah" style="width: 156px; height: 5px;">&nbsp;</td>
 					{{-- direktur --}}
