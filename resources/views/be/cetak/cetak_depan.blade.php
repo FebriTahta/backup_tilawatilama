@@ -44,7 +44,7 @@
                     <td class="atas" style="width: 11px; height: 23px;"></td>
                     <td class="atas" style="width: 750px; height: 23px; text-transform: uppercase" >
 
-						{{ $item->alamat }}
+						{{ $item->alamat }} {{$item->kota}}
 						
 					
 					</td>
